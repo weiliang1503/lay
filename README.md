@@ -18,10 +18,10 @@ lay是使用Common Lisp编写的AUR Helper。旨在帮助用户自动化构建�
     lay -V         版本号
     lay -S  [包名] 构建包
     lay -Ss [包名] 搜索包
-    lay -Sy        更新旧的构建包
+    lay -Sy        更新旧的构建包(TODO)
 ```
 
-如果不使用参数那么将执行 lay -Syu
+如果不使用参数那么将执行 lay -Sy(TODO)
 
 ## 编译
 确保本机安装了quicklisp和sbcl
