@@ -28,6 +28,6 @@ Please make sure that you have installed `quicklisp` and `sbcl` already.
 ```bash
 git clone https://github.com/weiliang1503/lay.git
 cd lay
-sbcl --script make.lisp
+sbcl --script build.lisp
 ```
 Then run `./lay` would be OK.

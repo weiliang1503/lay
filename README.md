@@ -28,6 +28,6 @@ lay是使用Common Lisp编写的AUR Helper。旨在帮助用户自动化构建�
 ```bash
 git clone https://github.com/weiliang1503/lay.git
 cd lay
-sbcl --script make.lisp
+sbcl --script build.lisp
 ```
 然后执行./lay即可
