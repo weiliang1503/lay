@@ -1,5 +1,5 @@
-(defpackage :help (:use :common-lisp) (:export :lay_help))
-(in-package help)
+(in-package lay)
+
 (defun lay_help ()
   (princ
 "lay是一个AUR helper。但它不会帮你安装软件包，仅会帮你构建软件包。

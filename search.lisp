@@ -1,5 +1,5 @@
-(defpackage :search (:use :common-lisp) (:export lay_search))
-(in-package search)
+(in-package lay)
+
 (defun lay_search ( keyword )
   (sb-ext:run-program "/usr/bin/pacman" (list "-Ss" keyword) :input nil :output *standard-output*)
   (setf url (concatenate 'string "https://aur.archlinux.org/rpc/?v=5&type=search&arg=" keyword))
@@ -23,6 +23,4 @@
     (princ (cdr (nth 5 pkg)))
     (terpri)
         )
-  ;(setf data_base (json:decode-json my_json))
-  ;(princ (type-of data_base))
   )

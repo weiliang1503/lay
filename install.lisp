@@ -1,5 +1,5 @@
-(defpackage :install (:use :common-lisp) (:export :lay_install))
-(in-package install)
+(in-package lay)
+
 (defun lay_install ( keyword )
   (format t ":: 尝试查找常规源~%")
   (setf code_return (sb-ext:run-program "/usr/bin/pacman" (list "-Si" keyword) :input nil :output *standard-output*))
