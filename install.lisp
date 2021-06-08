@@ -12,7 +12,7 @@
   (setf code_return (sb-ext:run-program "/usr/bin/bash" (list "-c" "if [ ! -d ~/.cache/aur ];then mkdir -p ~/.cache/aur;fi") :input nil :output *standard-output*))
   (trivial-download:download (concatenate 'string "https://aur.archlinux.org/cgit/aur.git/snapshot/" keyword ".tar.gz") "~/.cache/aur/laytmp.tar.gz")
   (setf code_return (sb-ext:run-program "/usr/bin/bash" (list "-c" "tar -xzvf ~/.cache/aur/laytmp.tar.gz -C ~/.cache/aur/") :input nil :output *standard-output*))
-  (setf code_return (sb-ext:run-program "/usr/bin/bash" (list "-c" (concatenate 'string "cd ~/.cache/aur/" keyword " && makepkg &&mv *.pkg.tar.zst laybuild.pkg.tar.zst")) :input nil :output *standard-output*))
+  (setf code_return (sb-ext:run-program "/usr/bin/bash" (list "-c" (concatenate 'string "cd ~/.cache/aur/" keyword " && rm *.pkg.tar.zst && makepkg &&mv *.pkg.tar.zst laybuild.pkg.tar.zst")) :input nil :output *standard-output*))
   (when (= (sb-ext:process-exit-code code_return) 0) (princ (concatenate 'string ":: 包构建完成，可以使用sudo pacman -U ~/.cache/aur/" keyword "/laybuild.pkg.tar.zst 进行安装")))
   (terpri)
   )
