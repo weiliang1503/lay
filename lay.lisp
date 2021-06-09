@@ -12,6 +12,7 @@
         ((string= my_arg "-Ss") (lay_search (nth 2 *posix-argv*)))
         ((string= my_arg "-S") (lay_install (nth 2 *posix-argv*)))
         ((string= my_arg "-V") (format t "lay: An AUR Helper Written In Common Lisp~%~D~%" *lay_version*))
+        ((string= my_arg "-Sw") (lay_download (nth 2 *posix-argv*)))
           )
    (return-from main 0)
   )

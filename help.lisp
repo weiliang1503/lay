@@ -13,7 +13,8 @@
     lay -V         版本号
     lay -S  [包名] 构建包
     lay -Ss [包名] 搜索包
-    lay -Sy        更新旧的构建包
+    lay -Sw [包名] 下载对应AUR包的PKGBUILD
+    lay -Sy        更新旧的构建包#TODO
 
 如果不使用参数那么将执行 lay -Syu
 "))
