@@ -23,7 +23,7 @@
   (when (= (sb-ext:process-exit-code code_return) 0)
     (format t ":: 可以使用sudo pacman -S ~S安装这个包~%:: 在常规源中找到了包，是否中断下载？[y/n]" keyword)
     (if (string= (read) "N") (format t "~%继续从AUR下载PKGBUILD~%")
-        (return-from lay_install 0)
+        (return-from lay_download 0)
         )
     )
   (setf code_return (sb-ext:run-program "/usr/bin/bash" (list "-c" "if [ ! -d ~/.cache/aur ];then mkdir -p ~/.cache/aur;fi") :input nil :output *standard-output*))
